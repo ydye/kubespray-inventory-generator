@@ -81,7 +81,6 @@ def main():
         'cfg': load_yaml_config(args.configuration)
     }
     template = read_template("hosts.yml.template")
-    print(template)
     generated_template = generate_from_template_dict(template, {
         "env": environment
     })
