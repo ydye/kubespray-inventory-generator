@@ -80,7 +80,7 @@ def main():
         'worker': csv_reader(args.worklist),
         'cfg': load_yaml_config(args.configuration)
     }
-
+    print(environment)
     template = read_template("hosts.yml.template")
     generated_template = generate_from_template_dict(template, {
         "env": environment
