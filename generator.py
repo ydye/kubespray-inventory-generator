@@ -83,7 +83,9 @@ def main():
 
     template = read_template("hosts.yml.template")
     generated_template = generate_from_template_dict(template, environment)
-    write_generated_file("hosts.yml", generated_template)
+    write_generated_file("hosts.yml", {
+        "env": generated_template
+    })
 
 
 if __name__ == "__main__":
